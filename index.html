@@ -1,56 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Study Assistant</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Assistant</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <header class="navbar">
-    <div class="logo">AI Study Assistant</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="login.html" class="btn-login">Login</a>
-    </nav>
-  </header>
+<body class="dark-theme">
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Study Smart with AI</h1>
-      <p>Get instant summaries and flashcards for any topic. Learn faster and remember more.</p>
-      <a href="login.html" class="hero-btn">Get Started</a>
-    </div>
-    <img src="assets/hero.png" class="hero-img">
-  </section>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">AI Study Assistant</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="ai-input.html">AI Tools</a>
+            <a href="flashcards.html">Flashcards</a>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button id="themeToggle">🌙</button>
+    </header>
 
-  <section class="features">
-    <h2>What I Can Do</h2>
+    <!-- HERO SECTION -->
+    <section class="hero fade-in">
+        <div class="hero-text">
+            <h1><span class="neon-gradient">Study Smarter with AI</span></h1>
+            <p>Get instant summaries, auto flashcards, and an AI-powered dashboard to boost your learning.</p>
+            <a href="ai-input.html" class="btn">Start Learning →</a>
+        </div>
+        <img src="assets/hero.png" class="hero-img">
+    </section>
 
-    <div class="cards">
-      <div class="card">
-        <h3>📘 AI Summaries</h3>
-        <p>Paste any content… AI gives you a clean summary.</p>
-      </div>
+    <!-- FEATURES -->
+    <section class="features fade-in">
+        <h2 class="section-title neon-gradient">What You Can Do</h2>
 
-      <div class="card">
-        <h3>🗂 Flashcards</h3>
-        <p>Generate instant flashcards for quick revision.</p>
-      </div>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>📘 AI Summaries</h3>
+                <p>Turn long lessons into simple summaries in seconds.</p>
+            </div>
 
-      <div class="card">
-        <h3>🎯 Study Planner</h3>
-        <p>Create a smart plan and track your progress.</p>
-      </div>
-    </div>
-  </section>
+            <div class="feature-card">
+                <h3>🗂 Auto Flashcards</h3>
+                <p>Generate perfect revision flashcards instantly.</p>
+            </div>
 
-  <footer>
-    <p>© 2025 AI Study Assistant</p>
-  </footer>
+            <div class="feature-card">
+                <h3>📊 Dashboard</h3>
+                <p>Track learning sessions, saved notes, and progress.</p>
+            </div>
+        </div>
+    </section>
 
-  <script src="app.js"></script>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="#"><img src="assets/icons/facebook.svg"></a>
+            <a href="#"><img src="assets/icons/instagram.svg"></a>
+            <a href="#"><img src="assets/icons/linkedin.svg"></a>
+        </div>
+        <p>© 2025 AI Study Assistant</p>
+    </footer>
+
+<script src="app.js"></script>
 </body>
 </html>
