@@ -3,69 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Study Assistant</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AIStudyGuide – Study Assistant</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 
-<body class="dark-theme">
+<body class="light">
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="logo">AI Study Assistant</div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">AIStudyGuide</h2>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="ai-input.html">AI Tools</a>
-            <a href="flashcards.html">Flashcards</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="login.html">Login</a>
             <a href="about.html">About</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact.html">Contact</a>
         </nav>
-        <button id="themeToggle">🌙</button>
-    </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero fade-in">
-        <div class="hero-text">
-            <h1><span class="neon-gradient">Study Smarter with AI</span></h1>
-            <p>Get instant summaries, auto flashcards, and an AI-powered dashboard to boost your learning.</p>
-            <a href="ai-input.html" class="btn">Start Learning →</a>
+        <div class="mode-toggle">
+            <span>🌞</span>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider round"></span>
+            </label>
+            <span>🌙</span>
         </div>
-        <img src="assets/hero.png" class="hero-img">
-    </section>
+    </aside>
 
-    <!-- FEATURES -->
-    <section class="features fade-in">
-        <h2 class="section-title neon-gradient">What You Can Do</h2>
+    <!-- Main Content -->
+    <main class="content">
 
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>📘 AI Summaries</h3>
-                <p>Turn long lessons into simple summaries in seconds.</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>AI Study Assistant</h1>
+            <p>Generate instant summaries and flashcards with AI. Faster learning, smarter revision.</p>
+        </section>
+
+        <!-- AI Input Area -->
+        <section class="ai-section">
+            <h2>Enter Your Lesson</h2>
+            <textarea id="lessonInput" placeholder="Paste your text or lesson content here..."></textarea>
+
+            <div class="action-row">
+                <select id="apiSelector">
+                    <option value="openai">OpenAI</option>
+                    <option value="claude">Claude</option>
+                </select>
+
+                <button onclick="generateSummary()">Generate Summary</button>
+                <button onclick="generateFlashcards()">Generate Flashcards</button>
             </div>
 
-            <div class="feature-card">
-                <h3>🗂 Auto Flashcards</h3>
-                <p>Generate perfect revision flashcards instantly.</p>
+            <p id="loading" class="loading hidden">⏳ AI is thinking...</p>
+        </section>
+
+        <!-- Summary Output -->
+        <section class="summary-output hidden" id="summarySection">
+            <h2>Summary</h2>
+            <p id="summaryText"></p>
+        </section>
+
+        <!-- Flashcards -->
+        <section class="flashcard-container hidden" id="flashcardSection">
+            <h2>Flashcards</h2>
+
+            <div class="flashcard">
+                <div id="flashcardContent">Click next to start</div>
             </div>
 
-            <div class="feature-card">
-                <h3>📊 Dashboard</h3>
-                <p>Track learning sessions, saved notes, and progress.</p>
+            <div class="flashcard-buttons">
+                <button onclick="prevFlashcard()">◀ Prev</button>
+                <button onclick="nextFlashcard()">Next ▶</button>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-social">
-            <a href="#"><img src="assets/icons/facebook.svg"></a>
-            <a href="#"><img src="assets/icons/instagram.svg"></a>
-            <a href="#"><img src="assets/icons/linkedin.svg"></a>
-        </div>
-        <p>© 2025 AI Study Assistant</p>
-    </footer>
+    </main>
 
-<script src="AI.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
