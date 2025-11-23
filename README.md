@@ -3,13 +3,13 @@
 
 Simple, friendly study assistant that helps students summarize lessons, create flashcards, and chat with an AI tutor. This project is a lightweight front-end site built with HTML, CSS and JavaScript.
 
----
+
 
 ## Scenario chosen
 
 This project is a student-focused study tool. The chosen scenario is: "Help learners study smarter by turning long text into short summaries, producing quick flashcards, and providing an interactive AI chat tutor for clarifications." The UI is optimized for desktop and mobile and supports light/dark themes.
 
----
+
 
 ## Color palette & font selection
 
@@ -31,7 +31,7 @@ Fonts used:
 
 These fonts were chosen for clear headings and highly readable body text on small and large screens.
 
----
+
 
 ## Features
 
@@ -43,7 +43,7 @@ These fonts were chosen for clear headings and highly readable body text on smal
 - Responsive layout (sidebar collapses to top header on small screens)
 - Attractive card UI with hover effects and animations
 
----
+
 
 ## Component checklist (confirmation)
 
@@ -57,19 +57,17 @@ These fonts were chosen for clear headings and highly readable body text on smal
 - About page (purpose, tools, team)
 - Responsive breakpoints and mobile-friendly header
 
----
 
-## Screenshots (placeholders)
-
+## Screenshots 
 
 
----
+
+
 
 ## Folder structure
 
-Typical project layout (root):
 
-```
+
 about.html
 index.html
 login.html
@@ -86,18 +84,17 @@ assets/
 			home.png
 			about.png
 			mobile.png
-```
 
----
+
+
 
 ## Live GitHub Pages link
 
 
+https://arththika04-collab.github.io/AI-Study-Assistant-Summaries-Flashcards-/
 
-`https://<your-username>.github.io/<repository-name>/`
 
 
----
 
 
 
