@@ -11,6 +11,30 @@
 
 <body class="light">
 
+    <script>
+        // Safe redirect: send visitors who hit the root URL to welcome.html by default.
+        // To bypass during development, add ?skipWelcome=true to the URL.
+        // Important: if the user explicitly visits index.html (for example by clicking the "Home" nav link),
+        // we DO NOT redirect so the Home page remains accessible.
+        (function(){
+            try {
+                const params = new URLSearchParams(window.location.search);
+                if (params.get('skipWelcome') === 'true') return;
+
+                const pathname = window.location.pathname || '/';
+                const lastSegment = pathname.split('/').pop();
+
+                // Redirect only when visiting the site root (no filename) or when pathname is '/'
+                if (pathname === '/' || lastSegment === '') {
+                    // If already on welcome.html avoid loop
+                    if (!pathname.endsWith('welcome.html')) {
+                        window.location.replace('welcome.html');
+                    }
+                }
+            } catch(e) { /* ignore errors */ }
+        })();
+    </script>
+
     <!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-brand">
